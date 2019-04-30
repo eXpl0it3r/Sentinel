@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AEBA92A3-FA44-48FE-9963-9A89077083EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WDSystemConfig</RootNamespace>
+    <AssemblyName>SysCfg</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CpuItem.cs" />
+    <Compile Include="CpuList.cs" />
+    <Compile Include="Drivelist.cs" />
+    <Compile Include="DrivelistEntry.cs" />
+    <Compile Include="DrivelistEntryCategory.cs" />
+    <Compile Include="DrivelistEntryType.cs" />
+    <Compile Include="DriveMap.cs" />
+    <Compile Include="DriveMapEntry.cs" />
+    <Compile Include="EthernetPort.cs" />
+    <Compile Include="EthernetPortProfiles.cs" />
+    <Compile Include="FanThrottle.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemProfile.cs" />
+    <Compile Include="ItemProfiles.cs" />
+    <Compile Include="ItemType.cs" />
+    <Compile Include="MapIndexData.cs" />
+    <Compile Include="MapIndexType.cs" />
+    <Compile Include="MonitorProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="Step.cs" />
+    <Compile Include="SystemConfig.cs" />
+    <Compile Include="SystemProfile.cs" />
+    <Compile Include="SystemProfiles.cs" />
+    <Compile Include="ThermalProfile.cs" />
+    <Compile Include="ThermalProfiles.cs" />
+    <Compile Include="XmlFileNs.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

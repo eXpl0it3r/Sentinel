@@ -4,13 +4,14 @@ The Western Digital Sentinel DS6100 server ships with a collection of proprietar
 Western Digital hasn't provided any software updates in years and the tools are made for the Windows Server Essentials which is no longer supported.
 This repository serves as collection for the decompiled source code with the aim to allow alternative managing software.
 
+![WD Sentinel DS6100](https://i.imgur.com/VluyHV2.png)
+
 ## Libraries & Tools
 
-- [hwlibdn](hwlib/) - .Net binding for the native Western Digital Hardware Library
+- [hwlibdn](hwlibdn/) - .Net binding for the native Western Digital Hardware Library
 - [MvApi](MvApi/) - .Net binding for the native Marvell SATA RAID Controller API
 - [SpacesApi](SpacesApi/) - Western Digital Spaces API provides access to disk managing operations
-
-![WD Sentinel DS6100](https://i.imgur.com/VluyHV2.png)
+- [SysCfg](SysCfg/) - Western Digital System Config holds various WD system specific config properties
 
 ## References
 

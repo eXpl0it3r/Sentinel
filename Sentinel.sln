@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvApi", "MvApi\MvApi.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpacesApi", "SpacesApi\SpacesApi.csproj", "{C752FCCC-7036-41E0-8E80-931960CD34C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysCfg", "SysCfg\SysCfg.csproj", "{AEBA92A3-FA44-48FE-9963-9A89077083EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C752FCCC-7036-41E0-8E80-931960CD34C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C752FCCC-7036-41E0-8E80-931960CD34C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C752FCCC-7036-41E0-8E80-931960CD34C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
