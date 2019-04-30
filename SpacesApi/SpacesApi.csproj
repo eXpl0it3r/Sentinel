@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C752FCCC-7036-41E0-8E80-931960CD34C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SpacesApi</RootNamespace>
+    <AssemblyName>SpacesApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessEnum.cs" />
+    <Compile Include="AttributeProperty.cs" />
+    <Compile Include="BusTypeEnum.cs" />
+    <Compile Include="CannotPoolReasonEnum.cs" />
+    <Compile Include="DetachedReasonEnum.cs" />
+    <Compile Include="Disk.cs" />
+    <Compile Include="DiskHealthStatusEnum.cs" />
+    <Compile Include="DiskOperationalStatusEnum.cs" />
+    <Compile Include="DriveTypeEnum.cs" />
+    <Compile Include="HealthStatusEnum.cs" />
+    <Compile Include="MbrTypeEnum.cs" />
+    <Compile Include="NameFormatEnum.cs" />
+    <Compile Include="OfflineReasonEnum.cs" />
+    <Compile Include="OperationalStatusEnum.cs" />
+    <Compile Include="ParityLayoutEnum.cs" />
+    <Compile Include="Partition.cs" />
+    <Compile Include="PartitionStyleEnum.cs" />
+    <Compile Include="PartitionTransitionStateEnum.cs" />
+    <Compile Include="PhysicalDisk.cs" />
+    <Compile Include="PoolUsage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvisioningTypeEnum.cs" />
+    <Compile Include="RetireMissingPhysicalDisksEnum.cs" />
+    <Compile Include="SpacesApi.cs" />
+    <Compile Include="SpacesApiError.cs" />
+    <Compile Include="SpacesApiUtil.cs" />
+    <Compile Include="StorageObject.cs" />
+    <Compile Include="StoragePool.cs" />
+    <Compile Include="StoragePoolAttributes.cs" />
+    <Compile Include="StorageUsage.cs" />
+    <Compile Include="UniqueIdFormatEnum.cs" />
+    <Compile Include="VirtualDisk.cs" />
+    <Compile Include="VirtualDiskUsage.cs" />
+    <Compile Include="Volume.cs" />
+    <Compile Include="VolumeHealthEnum.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
