@@ -21,7 +21,7 @@ namespace SentinelConsole
 
             using (var handler = new HardwareHandler())
             {
-                WDHWLib.HWBeep(handler.Handle, frequency, (uint)Math.Abs(duration.Milliseconds));
+                WDHWLib.HWBeep(handler.Handle, frequency, (uint)duration.Milliseconds);
             }
         }
 
@@ -83,6 +83,33 @@ namespace SentinelConsole
                     CriticalTemperatureStatus = digitalTemperatureSensorData.critTempStatus,
                     TemperatureStatus = digitalTemperatureSensorData.tempStatus,
                 };
+            }
+        }
+
+        public int GetFanRPM(FanType fanType)
+        {
+            using (var handler = new HardwareHandler())
+            {
+                var rpm = default(int);
+                WDHWLib.HWGetFanRPM(handler.Handle, 0, (WDHWLib.FAN_TYPE) fanType, ref rpm);
+                return rpm;
+            }
+        }
+
+        public void SetFanPWM(FanType fanType, int pwm)
+        {
+            if (pwm < 35 || pwm > 100)
+            {
+                throw new ArgumentException($"Fan PWM '{pwm}' for fan type '{fanType}' is outside of the allowed range [35-100]");
+            }
+
+            using (var handler = new HardwareHandler())
+            {
+                var status = WDHWLib.HWSetFanSpeed(handler.Handle, 0, (WDHWLib.FAN_TYPE) fanType, (byte)pwm);
+                if (status != WDHWLib.HWStatus.HW_STATUS_OK)
+                {
+                    throw new InvalidOperationException($"Failed to set fan '{fanType}' speed to '{pwm}' with error code '{status}'");
+                }
             }
         }
 

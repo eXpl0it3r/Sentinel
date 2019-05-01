@@ -7,7 +7,7 @@ namespace SentinelConsole
         private static void Main(string[] args)
         {
             var sentinelService = new SentinelService();
-            sentinelService.Beep(18000, TimeSpan.FromSeconds(1));
+            sentinelService.Beep(12000, TimeSpan.FromSeconds(1));
 
             var systemInfo = sentinelService.GetSystemInfo();
             var numberOfProcessors = sentinelService.GetNumberOfProcessors();
@@ -24,6 +24,15 @@ namespace SentinelConsole
                                       $"    Valid: {temperatureData.Valid}\n" +
                                       $"    Status: {temperatureData.TemperatureStatus}\n" +
                                       $"    Critical Status: {temperatureData.CriticalTemperatureStatus}");
+            }
+
+            Console.Out.WriteLine($"CPU Fan RPM: {sentinelService.GetFanRPM(FanType.CPUFan)}");
+            Console.Out.WriteLine($"System Fan RPM: {sentinelService.GetFanRPM(FanType.SystemFan)}");
+            Console.Out.Write("Set System Fan PWM (35-100):");
+            var systemFanPWM = int.Parse(Console.In.ReadLine());
+            if (systemFanPWM != 0)
+            {
+                sentinelService.SetFanPWM(FanType.SystemFan, systemFanPWM);
             }
         }
     }
