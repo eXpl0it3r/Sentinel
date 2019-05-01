@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpacesApi", "SpacesApi\Spac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysCfg", "SysCfg\SysCfg.csproj", "{AEBA92A3-FA44-48FE-9963-9A89077083EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WDStorLib", "WDStorLib\WDStorLib.csproj", "{A1D072FD-7121-4975-A1A1-769B4FD98A8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEBA92A3-FA44-48FE-9963-9A89077083EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D072FD-7121-4975-A1A1-769B4FD98A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D072FD-7121-4975-A1A1-769B4FD98A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D072FD-7121-4975-A1A1-769B4FD98A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D072FD-7121-4975-A1A1-769B4FD98A8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

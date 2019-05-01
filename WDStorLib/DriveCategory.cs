@@ -1,0 +1,10 @@
+﻿namespace Stor
+{
+	public enum DriveCategory
+	{
+		DRIVE_CATEGORY_UNKNOWN,
+		DRIVE_CATEGORY_PREFERRED,
+		DRIVE_CATEGORY_SUPPORTED,
+		DRIVE_CATEGORY_BLACKLISTED
+	}
+}

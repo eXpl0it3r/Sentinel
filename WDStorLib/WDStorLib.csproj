@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1D072FD-7121-4975-A1A1-769B4FD98A8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Stor</RootNamespace>
+    <AssemblyName>WDStorLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ata.cs" />
+    <Compile Include="ATACmdFlags.cs" />
+    <Compile Include="ATACmdInfo.cs" />
+    <Compile Include="COMMAND_ERROR_RECOVERY_CONTROL.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="ControllerDeviceType.cs" />
+    <Compile Include="ControllerEventType.cs" />
+    <Compile Include="ControllerMonitor.cs" />
+    <Compile Include="ControllerMonitorConfig.cs" />
+    <Compile Include="ControllerVendorId.cs" />
+    <Compile Include="CreateVolumeData.cs" />
+    <Compile Include="Drive.cs" />
+    <Compile Include="DriveBay.cs" />
+    <Compile Include="DriveBayChangedEvent.cs" />
+    <Compile Include="DriveBayHW.cs" />
+    <Compile Include="DriveBayMonitor.cs" />
+    <Compile Include="DriveBayStatusEnum.cs" />
+    <Compile Include="DriveCategory.cs" />
+    <Compile Include="DriveDomain.cs" />
+    <Compile Include="DriveEvent.cs" />
+    <Compile Include="DrivePort.cs" />
+    <Compile Include="DriveStatus.cs" />
+    <Compile Include="FEAT_CFG_FMT_HEADER.cs" />
+    <Compile Include="FEAT_ID.cs" />
+    <Compile Include="KEY_SECT.cs" />
+    <Compile Include="ListComparer.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MarvellController.cs" />
+    <Compile Include="MarvellControllerMonitor.cs" />
+    <Compile Include="MarvellControllerMonitorConfig.cs" />
+    <Compile Include="MarvellDrive.cs" />
+    <Compile Include="MarvellUtil.cs" />
+    <Compile Include="MarvellVolume.cs" />
+    <Compile Include="MemoryWrapper.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="ModelDriveEvent.cs" />
+    <Compile Include="ModelUpdateCompleteEvent.cs" />
+    <Compile Include="ModelVolumeEvent.cs" />
+    <Compile Include="PersistentDriveInfo.cs" />
+    <Compile Include="PersistentDriveInfoList.cs" />
+    <Compile Include="PoolEvent.cs" />
+    <Compile Include="PortMultiplier.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaidLevel.cs" />
+    <Compile Include="Smart.cs" />
+    <Compile Include="SmartAttribute.cs" />
+    <Compile Include="SmartInfo.cs" />
+    <Compile Include="SmartPrediction.cs" />
+    <Compile Include="SmartThreshold.cs" />
+    <Compile Include="SpacesController.cs" />
+    <Compile Include="SpacesControllerMonitor.cs" />
+    <Compile Include="SpacesControllerMonitorConfig.cs" />
+    <Compile Include="SpacesDrive.cs" />
+    <Compile Include="SpacesPool.cs" />
+    <Compile Include="SpacesUtil.cs" />
+    <Compile Include="SpacesVolume.cs" />
+    <Compile Include="Storage.cs" />
+    <Compile Include="StorApiStatus.cs" />
+    <Compile Include="StorApiStatusEnum.cs" />
+    <Compile Include="StorHelper.cs" />
+    <Compile Include="StripeSize.cs" />
+    <Compile Include="UpdateCompletedEvent.cs" />
+    <Compile Include="Volume.cs" />
+    <Compile Include="VolumeEvent.cs" />
+    <Compile Include="VolumeInitializeType.cs" />
+    <Compile Include="VolumeStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\hwlibdn\hwlibdn.csproj">
+      <Project>{a413f7f4-839e-4044-9341-020ac2e03139}</Project>
+      <Name>hwlibdn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvApi\MvApi.csproj">
+      <Project>{f740a1b1-97fe-43b3-9c14-63b15dd017bf}</Project>
+      <Name>MvApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpacesApi\SpacesApi.csproj">
+      <Project>{c752fccc-7036-41e0-8e80-931960cd34c0}</Project>
+      <Name>SpacesApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysCfg\SysCfg.csproj">
+      <Project>{aeba92a3-fa44-48fe-9963-9a89077083ec}</Project>
+      <Name>SysCfg</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -12,6 +12,7 @@ This repository serves as collection for the decompiled source code with the aim
 - [MvApi](MvApi/) - .Net binding for the native Marvell SATA RAID Controller API
 - [SpacesApi](SpacesApi/) - Western Digital Spaces API provides access to disk managing operations
 - [SysCfg](SysCfg/) - Western Digital System Config holds various WD system specific config properties
+- [WDStorLib](WDStorLib/) - Western Digital Storage Library
 
 ## References
 
