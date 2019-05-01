@@ -13,6 +13,7 @@ This repository serves as collection for the decompiled source code with the aim
 - [SpacesApi](SpacesApi/) - Western Digital Spaces API provides access to disk managing operations
 - [SysCfg](SysCfg/) - Western Digital System Config holds various WD system specific config properties
 - [WDStorLib](WDStorLib/) - Western Digital Storage Library
+- [SentinelConsole](SentinelConsole/) - Custom command line tool to retrieve some hardware infos
 
 ## References
 
